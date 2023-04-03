@@ -1,0 +1,102 @@
+<nav class="navbar navbar-expand-lg bg-light navbar-light" style="height: 90px;">
+  <div class="container">
+    <a class="navbar-brand" href="#"
+      ><img
+        id="MDB-logo"
+        src="../../assets/PALIG-logo.png"
+        alt="MDB Logo"
+        draggable="false"
+        height="50"/>
+    </a>
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item">
+          <a class="nav-link mx-2" href="dash">Regresar</a>
+        </li>
+      </ul>
+    </div>
+</nav>
+<br><br>
+<div class="container">
+<section class="vh-100">
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-6 col-xl-5">
+        <img src="https://global-uploads.webflow.com/5cd06573f0a28dce76ef883f/5d0a7f4c3608a92c9e8745f2_logo-pan-american.png"
+          class="img-fluid" alt="Sample image">
+      </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <form (submit)="todo()">
+          <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+            <h2 class="lead mb-0 ">Ingresa los datos</h2>
+          </div>
+          <br><br>
+          <!-- Nombre -->
+          <div class="form-outline mb-4">
+            <input type="text" id="form3Example3" class="form-control form-control-lg"
+              placeholder="Ingresa el Nombre Completo"
+              maxlength="45"
+              (keyup)="obtName($event)"
+              />
+          </div>
+
+          <!-- Apellidos -->
+          <div class="form-outline mb-4">
+              <input type="text" id="form3Example3" class="form-control form-control-lg"
+                placeholder="Ingresa el telefono"
+                (keyup)="obtPhone($event)"
+                maxlength="10"
+                />
+          </div>
+
+          <!-- Edad -->
+              <div class="form-outline mb-4">
+                  <input type="number" id="form3Example3" class="form-control form-control-lg"
+                    placeholder="Ingresa tu Edad"
+
+                    (keyup)="obtAge($event)"
+                    />
+              </div>
+
+          <div class="d-flex justify-content-between align-items-center mb-4">
+          <p class="lead fw-normal mb-0 me-3">Sexo</p>
+            <!-- Sexo -->
+            <div class="form-check mb-0">
+              <input type="radio" id="sexo" name="sexo" value="masculino" >
+              <label class="form-check-label" for="form2Example3">
+                Masculino
+              </label>
+          </div>
+            <!-- Sexo -->
+            <div class="form-check mb-0">
+              <input type="radio" id="sexo" name="sexo" value="femenino">
+              <label class="form-check-label" for="form2Example3">
+                Femenino
+              </label>
+          </div>
+          </div>
+          <!-- Cantidad -->
+          <div class="form-outline mb-4">
+              <input type="number" id="form3Example3" class="form-control form-control-lg"
+                placeholder="Ingresa la cantidad"
+                (keyup)="obtMonto($event)"
+                />
+              <label class="form-label" for="form3Example3">Cantidad asegurada</label>
+          </div>
+
+          <label for="plazo">Plazo:</label>
+          <select id="plazo" name="plazo" (click)="obtSel($event)">
+              <option value="0001">1 año</option>
+              <option value="0002">Permanente</option>
+          </select><br><br>
+
+          <div class="text-center text-lg-start mt-4 pt-2">
+            <button type="submit" class="btn btn-primary btn-lg"
+              style="padding-left: 2.5rem; padding-right: 2.5rem;">Enviar</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</div>

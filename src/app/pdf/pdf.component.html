@@ -1,0 +1,53 @@
+<div id="pdfcontainer" class="pdf">
+<p class="header" style="margin-bottom: 25px;"><img src="../../assets/PALIG-logo.png" width="300px" style="margin-right: 20px;">
+  <b>Pan-American Life Insurance Groud</b>
+  </p>
+
+  <p class="header" style="margin-bottom: 50px;">
+      {{persona.date}}
+  </p>
+
+  <p>
+      Cordial saludo {{persona.name}}
+      <br><br>
+      Esta carta tiene el fin de mostrar la cotización de su seguro de vida el cual
+      usted a solicitado a nuestro gestor de la compañia "Pan-American Life Insurance Group",
+      así que, a continución mostramos una tabla la cual especifica los datos entregados para
+      su cotización.
+  </p>
+
+  <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">Plazo</th>
+          <th scope="col">Monto</th>
+          <th scope="col">Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">{{persona.name}}</th>
+          <td>{{persona.plazo}}</td>
+          <td>{{persona.total}}</td>
+          <td>{{persona.monto}}</td>
+        </tr>
+      </tbody>
+  </table>
+
+  <p style="margin-bottom: 50px;">
+      Esta cotización es valida para el día {{persona.date}}, cualquier inquietud comunicarse con el gestor
+      que realizo la cotización.
+  </p>
+
+  <p style="align-content: center;">
+      Atentamente: {{persona.idAg}}
+  </p>
+</div>
+<div class="container text-center">
+  <button class="btn btn-primary" (click)="download()">Descargar</button>
+  <br><br><br>
+  <a href="/dash" class="btn btn-primary">Volver</a>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
